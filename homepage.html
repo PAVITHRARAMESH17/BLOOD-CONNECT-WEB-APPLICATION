@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff5f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #df5586, #c22f2f, #9e355a);
+      padding: 25px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.8rem;
+      color: #811b1f;
+      flex: 1 1 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgb(241, 230, 229);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #780b0b;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #280b0b, #f06595);
+      color: white;
+    }
+
+    .hero img {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      padding: 14px 32px;
+      background: white;
+      color: #e63946;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #ffe6e6;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      color: #e63946;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer {
+      background: #e63946;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      nav a {
+        font-size: 1.1rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero img {
+        width: 120px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      header {
+        padding: 20px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BLOOD CONNECT</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="whydonate.html">Why Donate</a>
+      <a href="register.html">Register</a>
+      <a href="donorlist.html">Find Donors</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Bright Red Blood Drop Icon">
+    <h2>Donate Blood, Save Lives</h2>
+    <p>Your one donation can save up to three lives. Be a hero today.</p>
+    <button class="cta-button" onclick="window.location.href = 'donorlist.html';">I Need Blood</button>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Us</h3>
+    <p>We are a non-profit initiative aimed at connecting blood donors with recipients in urgent need. Our platform makes it easy and fast to find or become a donor.</p>
+  </section>
+
+  <section class="section" id="why-donate">
+    <h3>Why Donate Blood?</h3>
+    <p>Every two seconds, someone in need requires blood. Donating blood is a simple, safe, and generous act that saves lives—from accident victims to patients undergoing surgeries or battling diseases.</p>
+    <p>Blood cannot be manufactured – it can only come from generous donors. It helps treat cancer, anemia, and blood disorders, and supports surgeries. Donating also improves your health by stimulating new blood cell production and can even reduce harmful iron stores.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BloodConnect. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

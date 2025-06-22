@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloodConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    /* Splash Screen */
+    .splash-screen {
+      background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 204, 203, 0.5)), 
+        url('https://images.unsplash.com/photo-1615461066840-f5b4f7f2634b') center/cover no-repeat;
+      color: #b71c1c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .splash-screen h1 {
+      font-size: 6vw;
+      font-weight: 700;
+      color: #c62828;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .splash-screen h1 img {
+      width: 20vw;
+      max-width: 120px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Donor/Acceptor Selection */
+    .select-screen {
+      display: none;
+      background: linear-gradient(135deg, #ffc1e3, #ff8a80);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .select-screen h2 {
+      font-size: 1.8rem;
+      color: #b71c1c;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .select-screen button {
+      background-color: #e53935;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .select-screen button:hover {
+      background-color: #c62828;
+    }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      .splash-screen h1 {
+        font-size: 8vw;
+      }
+
+      .select-screen h2 {
+        font-size: 1.5rem;
+      }
+
+      .select-screen button {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .splash-screen h1 {
+        font-size: 9vw;
+      }
+
+      .splash-screen h1 img {
+        width: 25vw;
+      }
+
+      .select-screen h2 {
+        font-size: 1.3rem;
+      }
+
+      .select-screen button {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splash">
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart Icon" />
+      BLOOD CONNECT
+    </h1>
+  </div>
+
+  <!-- Donor/Acceptor Selection -->
+  <div class="select-screen" id="select">
+    <h2>Are you a Donor or Need Blood?</h2>
+    <button onclick="window.location.href='homepage.html'">I am a Donor</button>
+    <button onclick="window.location.href='donorlist.html'">I Need Blood</button>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('select').style.display = 'flex';
+    }, 5000);
+  </script>
+</body>
+</html>
